@@ -12,7 +12,11 @@
   <div class="newspaper-container">
     <!-- header -->
     <header>
-      <div class="date">MARCH 3, 2022</div>
+      <div id="dateDisplay"></div>
+      <script>
+        const d = new Date();
+        document.getElementById("dateDisplay").innerHTML = d.toLocaleDateString('en-us', {weekday:"long",month:"long",day:"numeric",year:"numeric"});
+      </script>
       <h1>The Hacker Times</h1>
     </header>
     <!-- navigation -->
